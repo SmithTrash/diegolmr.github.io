@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <style>
+        /* Esconda o conteúdo das abas por padrão */
+        .tabcontent {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="tablinks" onclick="openTab(event, 'Sobre')">Sobre</a></li>
+            <li><a href="#" class="tablinks" onclick="openTab(event, 'Formacao')">Formação</a></li>
+            <li><a href="#" class="tablinks" onclick="openTab(event, 'Objetivos')">Objetivos</a></li>
+            <li><a href="#" class="tablinks" onclick="openTab(event, 'Email')">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <div id="Sobre" class="tabcontent">
+        <h1>Sobre</h1>
+        <div class="box">
+            <p>Diego Moraes, estudante de Análise e Desenvolvimento de Sistemas na Faculdade Uninter. Com 8 anos de experiência na área de T.I. como suporte, busco expandir meus conhecimentos em programação, com foco na linguagem Go para o desenvolvimento de websites. Aproveito meu tempo livre para aprofundar minhas habilidades e explorar novas tecnologias que possam aprimorar minhas soluções e minha carreira profissional.</p>
+        </div>
+    </div>
+
+    <div id="Formacao" class="tabcontent">
+        <h1>Formação</h1>
+        <div class="box">
+            <p>Atualmente, estou cursando Análise e Desenvolvimento de Sistemas no modelo EAD pela Faculdade Uninter. Estou no primeiro ano do curso, onde estou me dedicando ao estudo da linguagem de programação Go, com foco no desenvolvimento de soluções inovadoras e eficientes.</p>
+        </div>
+    </div>
+
+    <div id="Objetivos" class="tabcontent">
+        <h1>Objetivos</h1>
+        <div class="box">
+            <p>Meu objetivo principal é aprofundar meus conhecimentos em novas tecnologias, com um foco especial em programação e desenvolvimento de sites. Estou constantemente buscando aprender e me adaptar às tendências emergentes do mercado de T.I. e minha meta é migrar internamente na área, direcionando minha carreira para o desenvolvimento de soluções web eficientes e inovadoras.</p>
+        </div>
+    </div>
+
+    <div id="Email" class="tabcontent">
+        <h1>Entre em Contato</h1>
+        <form action="/send-email" method="POST">
+            <label for="email">Seu E-mail:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Mensagem:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Abre a aba "Sobre" por padrão ao carregar a página
+        document.getElementById("Sobre").style.display = "block";
+    </script>
+</body>
+</html>

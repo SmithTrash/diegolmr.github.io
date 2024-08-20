@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../imagens/chess.jpg');
+    background-size: cover; /* Faz que a imagem se ajuste ao tamanho da janela */
+    background-repeat: no-repeat; /* Impede que a imagem seja repetida (isso irrita kkkk) */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa durante o scroll */
+    height: 100vh; /* Garante que o body ocupe 100% da altura da janela */
+}
+
+/*Configura a parte da Nav do site */
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tabcontent {
+    display: none;
+    padding: 2rem;
+    color: rgb(253, 253, 253);
+    text-align: left; /* Alinha o texto à direita */
+}
+
+.tabcontent h1{
+    margin-top: 0;
+    text-align: left; /* Alinha o título à direita */
+}
+.box{
+    width: 500px;
+    position: absolute;
+    left: auto;
+    text-indent: 8px; /*Alinha o inicio do paragrafo do texto */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    margin-bottom: 5px;
+    color: white;
+}
+
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #fdfdfd;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff0000;
+}
